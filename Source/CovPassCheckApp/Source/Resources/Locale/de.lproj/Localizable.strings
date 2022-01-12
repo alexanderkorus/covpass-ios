@@ -29,7 +29,7 @@
 
 "validation_first_onboarding_page_title" = "Erster Schritt: Den QR-Code mit der CovPassCheck-App scannen";
 
-"validation_first_onboarding_page_message" = "Scannen Sie mit der CovPassCheck-App den QR-Code auf einem digitalen COVID-Zertifikat der EU. Die QR-Codes der Papierversion enthalten die gleichen Informationen wie die QR-Codes der elektronische Version in der CovPass-App oder in anderen Apps, in denen digitale COVID-Zertifikate der EU hinterlegt sind. Daher sind beide Zertifikatsversionen gleichwertig.";
+"validation_first_onboarding_page_message" = "Scannen Sie mit der CovPassCheck-App den QR-Code auf einem digitalen COVID-Zertifikat der EU. Die QR-Codes der Papierversion enthalten die gleichen Informationen wie die QR-Codes der elektronischen Version in der CovPass-App oder in anderen Apps, in denen digitale COVID-Zertifikate der EU hinterlegt sind. Daher sind beide Zertifikatsversionen gleichwertig.";
 
 "validation_second_onboarding_page_title" = "Zweiter Schritt: Die Identität mit einem Ausweisdokument überprüfen";
 
@@ -83,11 +83,13 @@
 
 "validation_start_screen_scan_sync_message_title" = "Datum und Uhrzeit prüfen";
 
-"validation_start_screen_scan_sync_message_text" = "Bitte korrigieren Sie das Datum und die Uhrzeit Ihres Telefons. \n\n Soll: %@";
+"validation_start_screen_scan_sync_message_text" = "Bitte korrigieren Sie das Datum und die Uhrzeit Ihres Smartphones. \n\n Soll: %@";
 
 "validation_start_screen_scan_message" = "Scannen Sie jetzt das digitale COVID-Zertifikat der EU. Sie sehen sofort, ob die geprüfte Person ein gültiges COVID-Zertifikat besitzt.";
 
 "accessibility_scan_result_announce" = "Überprüfungsergebnis wird angezeigt";
+
+"accessibility_scan_result_closing_announce" = "Die Ansicht Überprüfungsergebnis wurde geschlossen";
 
 "validation_start_screen_scan_action_button_title" = "Zertifikat scannen";
 
@@ -128,6 +130,8 @@
 
 "accessibility_scan_camera_announce" = "Kamera-Ansicht wurde geöffnet";
 
+"accessibility_scan_camera_closing_announce" = "Kamera-Ansicht wurde geschlossen";
+
 "error_camera_access_title" = "Die CovPassCheck-App möchte auf Ihre Kamera zugreifen.";
 
 "error_camera_access_message" = "Erlauben Sie den Zugriff, um QR-Codes scannen zu können.";
@@ -147,6 +151,8 @@
 "validation_check_popup_valid_vaccination_date_of_birth" = "Geboren am %@";
 
 "validation_check_popup_valid_vaccination_recovery_note" = "* Genesenen- oder Impfzertifikat liegt vor.";
+
+"validation_check_popup_valid_vaccination_abda_incident_note" = "Dies ist ein gültiges Zertifikat, das jedoch aufgrund von Betrugsermittlungen bald gesperrt werden wird.\n\nWeisen Sie den oder die Zertifikatsinhaber:in unbedingt darauf hin, dass er oder sie sich unter Vorlage des gelben Impfpasses und eines Lichtbildausweises bis zum 11.11.2021 in der Apotheke ein neues, kostenfreies Impfzertifikat ausstellen lassen muss. ";
 
 "technical_validation_check_popup_unsuccessful_certificate_title" = "Zertifikat nicht gültig";
 
@@ -255,7 +261,9 @@
 
 "app_information_title_datenschutz" = "Datenschutzerklärung";
 
-"accessibility_app_information_datenschutz_announce" = "Die Datenschutzerklärung wurde geöffnet";
+"accessibility_app_information_datenschutz_announce" = "Datenschutzerklärung wurde geöffnet";
+
+"accessibility_app_information_datenschutz_closing_announce" = "Datenschutzerklärung wurde geschlossen";
 
 "app_information_title_company_details" = "Impressum";
 
@@ -276,6 +284,24 @@
 "app_information_message_open_source" = "Die App verwendet die folgenden Open-Source-Bibliotheken:";
 
 "accessibility_app_information_open_source_label_back" = "Zurück";
+
+"app_information_title_update" = "Prüfregeln aktualisieren";
+
+"app_information_message_update" = "Zur Überprüfung eingescannter Zertifikate benötigt die App aktuelle Listen der vertrauenswürdigen Zertifikatsaussteller und der momentan in Deutschland geltenden Corona-Regeln.\n\nDiese Listen aktualisieren sich täglich automatisch. Sie können hier auch jederzeit eine manuelle Aktualisierung vornehmen.";
+
+"app_information_message_update_note" = "Letztes Update";
+
+"app_information_message_update_pattern" = "Letztes Update: %@";
+
+"app_information_message_update_certificates" = "Liste der Zertifikatsaussteller: %@";
+
+"app_information_message_update_rules" = "Prüfregeln: %@";
+
+"app_information_message_update_button" = "Aktualisieren";
+
+"accessibility_app_information_update_back" = "Zurück";
+
+"accessibility_app_information_title_update" = "Die Ansicht \"Prüfregeln aktualisieren\" wurde geöffnet";
 
 "app_information_version_label" = "Version %@";
 

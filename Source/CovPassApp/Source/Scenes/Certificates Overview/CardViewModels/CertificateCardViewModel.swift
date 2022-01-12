@@ -94,7 +94,7 @@ class CertificateCardViewModel: CertificateCardViewModelProtocol {
 
     var subtitle: String {
         if token.vaccinationCertificate.isExpired {
-            return "certificates_overview_expired_certificate_note".localized
+            return "certificates_start_screen_qrcode_certificate_expired_subtitle".localized
         }
         if token.vaccinationCertificate.expiresSoon {
             guard let expireDate = token.vaccinationCertificate.exp else {
@@ -106,10 +106,12 @@ class CertificateCardViewModel: CertificateCardViewModelProtocol {
         }
 
         if token.vaccinationCertificate.isInvalid {
-            return "certificates_overview_invalid_certificate_note".localized
+            return "certificates_start_screen_qrcode_certificate_invalid_subtitle".localized
         }
         if let r = certificate.r?.first {
-            if Date() < r.df {
+            if showNotification {
+                return "vaccination_start_screen_qrcode_booster_vaccination_note_subtitle".localized
+            } else if Date() < r.df {
                 return String(format: "certificates_overview_recovery_certificate_valid_from_date".localized, DateUtils.displayDateFormatter.string(from: r.df))
             }
             return String(format: "certificates_overview_recovery_certificate_valid_until_date".localized, DateUtils.displayDateFormatter.string(from: r.du))
@@ -132,7 +134,7 @@ class CertificateCardViewModel: CertificateCardViewModelProtocol {
     }
 
     var titleIcon: UIImage {
-        if token.vaccinationCertificate.isExpired {
+        if isExpired {
             return UIImage.expired
         }
         if token.vaccinationCertificate.expiresSoon {
@@ -142,7 +144,7 @@ class CertificateCardViewModel: CertificateCardViewModelProtocol {
             return vaccinationCertificateIsValidNow ? UIImage.activity.withRenderingMode(.alwaysTemplate) : UIImage.activity.withRenderingMode(.alwaysOriginal)
         }
         if certificate.r != nil {
-            return UIImage.statusFullDetail
+            return showNotification ? UIImage.statusFullNotfication : UIImage.statusFullDetail
         }
         if certificate.t != nil {
             return UIImage.iconTest

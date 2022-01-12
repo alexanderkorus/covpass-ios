@@ -83,11 +83,13 @@
 
 "validation_start_screen_scan_sync_message_title" = "Check date and time";
 
-"validation_start_screen_scan_sync_message_text" = "Please check the date and time of your phone. \n\n It should be: %@";
+"validation_start_screen_scan_sync_message_text" = "Please check the date and time of your smartphone. \n\n It should be: %@";
 
 "validation_start_screen_scan_message" = "Scan the EU Digital COVID Certificate now. You see immediately if the person you are checking has a valid Covid-19 certificate.";
 
 "accessibility_scan_result_announce" = "Verification result is displayed";
+
+"accessibility_scan_result_closing_announce" = "The view \"Verification result“ has been closed";
 
 "validation_start_screen_scan_action_button_title" = "Scan certificate";
 
@@ -128,6 +130,8 @@
 
 "accessibility_scan_camera_announce" = "Camera has been opened";
 
+"accessibility_scan_camera_closing_announce" = "Camera has been closed";
+
 "error_camera_access_title" = "The CovPassCheck app wants to access your camera.";
 
 "error_camera_access_message" = "Allow access to scan QR codes.";
@@ -147,6 +151,8 @@
 "validation_check_popup_valid_vaccination_date_of_birth" = "Born on %@";
 
 "validation_check_popup_valid_vaccination_recovery_note" = "* Person has recovery or vaccination certificate.";
+
+"validation_check_popup_valid_vaccination_abda_incident_note" = " This is a valid certificate, but it will soon be revoked due to fraud investigations.\n\nPlease advise the certificate holder that he or she must present their yellow vaccination certificate and photo ID to a pharmacy by 11/11/2021. The pharmacy will issue a new vaccination certificate free of charge.";
 
 "technical_validation_check_popup_unsuccessful_certificate_title" = "Certificate not valid";
 
@@ -257,6 +263,8 @@
 
 "accessibility_app_information_datenschutz_announce" = "Privacy policy has been opened";
 
+"accessibility_app_information_datenschutz_closing_announce" = "Privacy policy has been closed";
+
 "app_information_title_company_details" = "Legal information";
 
 "app_information_title_company_details_linked" = "#Legal information::$0#";
@@ -276,6 +284,24 @@
 "app_information_message_open_source" = "The app uses the following open-source libraries:";
 
 "accessibility_app_information_open_source_label_back" = "Back";
+
+"app_information_title_update" = "Update rule set";
+
+"app_information_message_update" = "To verify scanned certificates, the app requires up-to-date lists of trusted certificate issuers as well as the current Corona rules in Germany.\n\nThese lists are updated automatically on a daily basis. You can also manually update them here at any time.";
+
+"app_information_message_update_note" = "Most recent update";
+
+"app_information_message_update_pattern" = "Most recent update: %@";
+
+"app_information_message_update_certificates" = "List of certificate issuers: %@";
+
+"app_information_message_update_rules" = "Rule set: %@";
+
+"app_information_message_update_button" = "Update";
+
+"accessibility_app_information_update_back" = "Back";
+
+"accessibility_app_information_title_update" = "The view \"Update rule set\" has been opened";
 
 "app_information_version_label" = "Version %@";
 
