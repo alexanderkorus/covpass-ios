@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +17,7 @@
                 <outlet property="infoView" destination="l0H-jd-CpU" id="m9b-cl-1eB"/>
                 <outlet property="paragraphStackView" destination="Ba0-Bt-Y6p" id="0WS-As-LOh"/>
                 <outlet property="resultView" destination="Bik-p2-0B1" id="3rP-d2-Rbr"/>
+                <outlet property="safeQRCodeButton" destination="b0j-ah-5Bb" id="iBY-Hc-5TK"/>
                 <outlet property="stackView" destination="Yk1-DY-91Y" id="6vM-qh-eDf"/>
                 <outlet property="toolbarView" destination="a6B-vC-85H" id="GVl-aS-y18"/>
                 <outlet property="view" destination="t4C-5y-EmT" id="gWo-7g-qiL"/>
@@ -82,17 +83,26 @@
                         <constraint firstAttribute="height" constant="60" id="p6h-0Q-RGl"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="56" translatesAutoresizingMaskIntoConstraints="NO" id="b0j-ah-5Bb" userLabel="Safe QR Code Button" customClass="CustomToolbarView" customModule="CovPassUI">
+                    <rect key="frame" x="10" y="742" width="392" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="c6H-X6-VEa"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="GAV-T5-KlK"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="a6B-vC-85H" firstAttribute="top" secondItem="JkM-ga-acx" secondAttribute="bottom" constant="24" id="14h-Fa-081"/>
                 <constraint firstItem="GAV-T5-KlK" firstAttribute="bottom" secondItem="a6B-vC-85H" secondAttribute="bottom" constant="12" id="1gN-Qg-ZK0"/>
+                <constraint firstItem="b0j-ah-5Bb" firstAttribute="top" secondItem="JkM-ga-acx" secondAttribute="bottom" id="2dm-MM-LfV"/>
+                <constraint firstItem="b0j-ah-5Bb" firstAttribute="leading" secondItem="GAV-T5-KlK" secondAttribute="leading" constant="10" id="3fS-Ph-3S2"/>
                 <constraint firstItem="JkM-ga-acx" firstAttribute="trailing" secondItem="GAV-T5-KlK" secondAttribute="trailing" id="73R-Zz-cqF"/>
                 <constraint firstItem="a6B-vC-85H" firstAttribute="leading" secondItem="GAV-T5-KlK" secondAttribute="leading" id="IMD-Zp-vQy"/>
                 <constraint firstItem="5Zd-xw-4Zy" firstAttribute="trailing" secondItem="GAV-T5-KlK" secondAttribute="trailing" id="Mnt-Fp-KHY"/>
+                <constraint firstItem="b0j-ah-5Bb" firstAttribute="bottom" secondItem="a6B-vC-85H" secondAttribute="top" constant="12" id="Zg2-IP-jci"/>
                 <constraint firstItem="5Zd-xw-4Zy" firstAttribute="top" secondItem="GAV-T5-KlK" secondAttribute="top" constant="20" id="am7-nm-ws6"/>
                 <constraint firstItem="JkM-ga-acx" firstAttribute="leading" secondItem="GAV-T5-KlK" secondAttribute="leading" id="cqG-zQ-EMx"/>
+                <constraint firstItem="GAV-T5-KlK" firstAttribute="trailing" secondItem="b0j-ah-5Bb" secondAttribute="trailing" constant="12" id="klq-xM-RgV"/>
                 <constraint firstItem="5Zd-xw-4Zy" firstAttribute="leading" secondItem="GAV-T5-KlK" secondAttribute="leading" id="qmh-PK-wpq"/>
                 <constraint firstItem="JkM-ga-acx" firstAttribute="top" secondItem="5Zd-xw-4Zy" secondAttribute="bottom" id="qva-dS-5k1"/>
                 <constraint firstItem="a6B-vC-85H" firstAttribute="trailing" secondItem="GAV-T5-KlK" secondAttribute="trailing" id="ukR-cB-V4T"/>
@@ -108,6 +118,9 @@
             <size key="intrinsicContentSize" width="414" height="128"/>
         </designable>
         <designable name="a6B-vC-85H">
+            <size key="intrinsicContentSize" width="240" height="56"/>
+        </designable>
+        <designable name="b0j-ah-5Bb">
             <size key="intrinsicContentSize" width="240" height="56"/>
         </designable>
     </designables>

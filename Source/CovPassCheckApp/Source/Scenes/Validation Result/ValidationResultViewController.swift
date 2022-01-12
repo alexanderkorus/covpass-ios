@@ -8,6 +8,7 @@
 
 import CovPassUI
 import UIKit
+import CovPassCommon
 
 private enum Constants {
     static let confirmButtonLabel = "validation_check_popup_valid_vaccination_button_title".localized
@@ -21,7 +22,8 @@ private enum Constants {
 class ValidationResultViewController: UIViewController {
     // MARK: - IBOutlet
 
-    @IBOutlet var stackView: UIStackView!
+	@IBOutlet weak var safeQRCodeButton: CustomToolbarView!
+	@IBOutlet var stackView: UIStackView!
     @IBOutlet var toolbarView: CustomToolbarView!
     @IBOutlet var headline: InfoHeaderView!
     @IBOutlet var imageContainerView: UIStackView!
@@ -100,6 +102,9 @@ class ValidationResultViewController: UIViewController {
     private func configureToolbarView() {
         toolbarView.state = .confirm(Constants.confirmButtonLabel)
         toolbarView.delegate = self
+
+		safeQRCodeButton.state = .saveQRCodeButton
+		safeQRCodeButton.delegate = self
     }
 
     private func configureAccessibility() {
@@ -128,10 +133,29 @@ extension ValidationResultViewController: CustomToolbarViewDelegate {
         switch buttonType {
         case .textButton:
             viewModel.scanNextCertifcate()
-        default:
+		case .saveQrCodeButton:
+			if let data = QRCodeImageState.default.qrCodeData, let image = data.generateQRCodeNoCI() {
+				UIImageWriteToSavedPhotosAlbum(
+					image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+				QRCodeImageState.default.qrCodeData = nil
+			}
+		default:
             return
         }
     }
+
+	@objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+		if let error = error {
+			// we got back an error!
+			let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+			ac.addAction(UIAlertAction(title: "OK", style: .default))
+			present(ac, animated: true)
+		} else {
+			let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+			ac.addAction(UIAlertAction(title: "OK", style: .default))
+			present(ac, animated: true)
+		}
+	}
 }
 
 // MARK: - ModalInteractiveDismissibleProtocol

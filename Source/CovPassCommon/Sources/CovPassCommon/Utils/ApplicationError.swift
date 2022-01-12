@@ -51,3 +51,14 @@ class PromiseCancelledError: CancellableError {
         return true
     }
 }
+
+class CentralDataState {
+
+	static let `default`: CentralDataState = {
+		CentralDataState()
+	}()
+
+	var qrCodeData: String? = nil
+
+	private init() {}
+}

@@ -35,6 +35,7 @@ public enum ButtonItemType {
     case scrollButton
     case disabledWithText
     case flashLight
+	case saveQrCodeButton
 }
 
 public enum CustomToolbarState: Equatable {
@@ -47,6 +48,7 @@ public enum CustomToolbarState: Equatable {
     case disabled
     case disabledWithText(String)
     case flashLight
+	case saveQRCodeButton
 }
 
 /// A custom toolbar that supports multiple states
@@ -75,6 +77,8 @@ public class CustomToolbarView: XibView {
                 setUpMiddleButton(middleButtonItem: .scrollButton)
             case let .confirm(title):
                 setupMiddleButton(with: title)
+			case .saveQRCodeButton:
+				setUpMiddleButton(middleButtonItem: .saveQrCodeButton)
             case .disabled:
                 setupDisabledButton()
             case let .disabledWithText(title):
@@ -197,6 +201,8 @@ public class CustomToolbarView: XibView {
             configureLoadingButton(previousMiddleButton: previousMiddleButton)
         case .scrollButton:
             configureScrollButton(button: scrollButton)
+		case .saveQrCodeButton:
+			configureMiddleButton(button: qrCodeButton, title: "QR-Code speichern")
         default:
             break
         }
@@ -225,6 +231,15 @@ public class CustomToolbarView: XibView {
         }
         return primaryButton
     }
+
+	private var qrCodeButton: MainButton {
+		primaryButton = MainButton()
+		primaryButton.action = { [weak self] in
+			guard let strongSelf = self else { return }
+			strongSelf.delegate?.customToolbarView(strongSelf, didTap: .saveQrCodeButton)
+		}
+		return primaryButton
+	}
 
     private var disabledButtonWithText: MainButton {
         primaryButton = MainButton()

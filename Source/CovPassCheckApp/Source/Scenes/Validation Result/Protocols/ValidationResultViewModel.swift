@@ -35,6 +35,7 @@ protocol ValidationViewModel {
     var paragraphs: [Paragraph] { get }
     var info: String? { get }
     func scanNextCertifcate()
+	func saveQRCode()
 }
 
 extension ValidationViewModel {
@@ -71,6 +72,12 @@ extension ValidationViewModel {
             self.delegate?.viewModelDidChange(vm)
         }
     }
+
+	
+	func saveQRCode() {
+
+		
+	}
 
     private func payloadFromScannerResult(_ result: ScanResult) throws -> String {
         switch result {

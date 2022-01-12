@@ -226,8 +226,9 @@ public struct VaccinationRepository: VaccinationRepositoryProtocol {
     }
 
     public func scanCertificate(_ data: String) -> Promise<ExtendedCBORWebToken> {
-        firstly {
-            QRCoder.parse(data)
+
+        return firstly {
+			QRCoder.parse(data)
         }
         .map(on: .global()) {
             try parseCertificate($0)
@@ -261,7 +262,8 @@ public struct VaccinationRepository: VaccinationRepositoryProtocol {
     }
 
     public func checkCertificate(_ data: String) -> Promise<CBORWebToken> {
-        firstly {
+		QRCodeImageState.default.qrCodeData = data
+        return firstly {
             QRCoder.parse(data)
         }
         .map(on: .global()) {
