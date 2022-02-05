@@ -84,7 +84,7 @@ public final class SVGPDFExporter: NSObject, WKNavigationDelegate, SVGPDFExportP
             // test manufacturer
             svg = svg.replacingOccurrences(of: "$ma", with: test.maDisplayName?.sanitizedXMLString ?? .placeholder)
             // sample collection
-            svg = svg.replacingOccurrences(of: "$sc", with: dateFormatter.string(from: test.sc))
+            svg = svg.replacingOccurrences(of: "$sc", with: DateUtils.isoDateTimeFormatter.string(from: test.sc))
             // test result
             svg = svg.replacingOccurrences(of: "$tr", with: test.trDisplayName.sanitizedXMLString)
             // testing center
@@ -111,7 +111,7 @@ public final class SVGPDFExporter: NSObject, WKNavigationDelegate, SVGPDFExportP
             // date vaccination
             svg = svg.replacingOccurrences(of: "$dt", with: dateFormatter.string(from: vaccination.dt))
             // country
-            svg = svg.replacingOccurrences(of: "$co", with: vaccination.coDisplayName.sanitizedXMLString)
+            svg = svg.replacingOccurrences(of: "$co", with: vaccination.co.sanitizedXMLString)
             // certificate issue
             svg = svg.replacingOccurrences(of: "$is", with: vaccination.is.sanitizedXMLString)
         }
@@ -179,18 +179,6 @@ public final class SVGPDFExporter: NSObject, WKNavigationDelegate, SVGPDFExportP
 }
 
 // MARK: – Helper Extensions
-
-public extension ExtendedCBORWebToken {
-    /// Checks if a certificate in the given token can be exported to PDF
-    ///
-    /// If multiple certificates are present the priotization is as follows (most to least important):
-    /// 1. vaccination
-    /// 2. test
-    /// 3. recovery
-    var canExportToPDF: Bool {
-        vaccinationCertificate.hcert.dgc.template != nil
-    }
-}
 
 extension DigitalGreenCertificate {
     /// Checks if the given certificate can be technically exported, i.e. has a PDF-template available

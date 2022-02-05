@@ -54,6 +54,9 @@ public extension UIImage {
     @ImageLoader(name: "chevron_right")
     private(set) static var chevronRight
 
+    @ImageLoader(name: "Field-Right")
+    private(set) static var FieldRight
+    
     @ImageLoader(name: "button_close")
     private(set) static var close
 
@@ -83,9 +86,12 @@ public extension UIImage {
 
     @ImageLoader(name: "star_48px")
     private(set) static var starEmpty
-
+    
     @ImageLoader(name: "prevention_label")
     private(set) static var completness
+    
+    @ImageLoader(name: "prevention")
+    private(set) static var prevention
 
     @ImageLoader(name: "shield_lefthalf_fill")
     private(set) static var halfShield
@@ -122,6 +128,9 @@ public extension UIImage {
 
     @ImageLoader(name: "result_success")
     private(set) static var resultSuccess
+    
+    @ImageLoader(name: "result_open")
+    private(set) static var resultOpen
 
     @ImageLoader(name: "result_error")
     private(set) static var resultError
@@ -197,6 +206,24 @@ public extension UIImage {
 
     @ImageLoader(name: "detail-status-full")
     private(set) static var detailStatusFull
+    
+    @ImageLoader(name: "detail-status-failed")
+    private(set) static var detailStatusFailed
+    
+    @ImageLoader(name: "detail-status-full-empty")
+    private(set) static var detailStatusFullEmpty
+    
+    @ImageLoader(name: "detail-status-test-empty")
+    private(set) static var detailStatusTestEmpty
+    
+    @ImageLoader(name: "detail-status-test")
+    private(set) static var detailStatusTest
+    
+    @ImageLoader(name: "icon-card-inverse")
+    private(set) static var iconCardInverse
+    
+    @ImageLoader(name: "icon-card-inverse-warning")
+    private(set) static var iconCardInverseWarning
 
     @ImageLoader(name: "detail-status-partial")
     private(set) static var detailStatusPartial

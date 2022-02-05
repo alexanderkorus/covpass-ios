@@ -27,6 +27,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
+      language = "en"
+      region = "US"
       codeCoverageEnabled = "YES">
       <CodeCoverageTargets>
          <BuildableReference
@@ -47,6 +49,11 @@
                BlueprintName = "CovPassCommonTests"
                ReferencedContainer = "container:Source/CovPassCommon">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "QualityAssuranceTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

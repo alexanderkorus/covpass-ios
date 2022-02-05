@@ -57,14 +57,14 @@ class DCCCertLogicTests: XCTestCase {
 
     func testLocalValueSets() {
         XCTAssertEqual(sut.valueSets.count, 8)
-        XCTAssertEqual(sut.valueSets["country-2-codes"]?.count, 249)
+        XCTAssertEqual(sut.valueSets["country-2-codes"]?.count, 250)
         XCTAssertEqual(sut.valueSets["covid-19-lab-result"]?.count, 2)
-        XCTAssertEqual(sut.valueSets["covid-19-lab-test-manufacturer-and-name"]?.count, 140)
+        XCTAssertEqual(sut.valueSets["covid-19-lab-test-manufacturer-and-name"]?.count, 190)
         XCTAssertEqual(sut.valueSets["covid-19-lab-test-type"]?.count, 2)
         XCTAssertEqual(sut.valueSets["disease-agent-targeted"]?.count, 1)
         XCTAssertEqual(sut.valueSets["sct-vaccines-covid-19"]?.count, 3)
-        XCTAssertEqual(sut.valueSets["vaccines-covid-19-auth-holders"]?.count, 15)
-        XCTAssertEqual(sut.valueSets["vaccines-covid-19-names"]?.count, 13)
+        XCTAssertEqual(sut.valueSets["vaccines-covid-19-auth-holders"]?.count, 22)
+        XCTAssertEqual(sut.valueSets["vaccines-covid-19-names"]?.count, 22)
     }
 
     func testRemoteValueSets() throws {
@@ -80,26 +80,41 @@ class DCCCertLogicTests: XCTestCase {
 
         let date = Date()
         try userDefaults.store(UserDefaults.keyLastUpdatedDCCRules, value: date)
-
+        
         XCTAssertEqual(sut.lastUpdatedDCCRules(), date)
     }
-
-    func testUpdateRulesIfNeeded() throws {
-        service.loadValueSetsResult = Promise.value([])
+    
+    func testUpdateRulesIfNeededTrue() throws {
+        let dateDefault = Date().addingTimeInterval(-100000000)
+        try userDefaults.store(UserDefaults.keyLastUpdatedDCCRules, value: dateDefault)
         service.loadBoosterRulesResult = Promise.value([])
+        
+        let lastUpdateDateBefore = try userDefaults.fetch(UserDefaults.keyLastUpdatedDCCRules) as! Date
+        XCTAssertEqual(dateDefault, lastUpdateDateBefore)
+        service.loadValueSetsResult = Promise.value([])
         try sut.updateRulesIfNeeded().wait()
-
-        do {
-            try sut.updateRulesIfNeeded().wait()
-            XCTFail("Should fail")
-        } catch {
-            XCTAssertEqual(error.localizedDescription, PromiseCancelledError().localizedDescription)
-        }
+        let lastUpdateDateAfter = try userDefaults.fetch(UserDefaults.keyLastUpdatedDCCRules) as! Date
+        XCTAssertNotNil(lastUpdateDateAfter)
+        XCTAssertNotEqual(dateDefault, lastUpdateDateAfter)
     }
+    
+    func testUpdateRulesIfNeededFalse() throws {
+        let dateDefault = Date()
+        try userDefaults.store(UserDefaults.keyLastUpdatedDCCRules, value: dateDefault)
+        service.loadBoosterRulesResult = Promise.value([])
+        
+        let lastUpdateDateBefore = try userDefaults.fetch(UserDefaults.keyLastUpdatedDCCRules) as! Date
+        XCTAssertEqual(dateDefault, lastUpdateDateBefore)
+        try sut.updateRulesIfNeeded().wait()
+        let lastUpdateDateAfter = try userDefaults.fetch(UserDefaults.keyLastUpdatedDCCRules) as! Date
+        XCTAssertNotNil(lastUpdateDateAfter)
+        XCTAssertEqual(dateDefault, lastUpdateDateAfter)
+    }
+
 
     func testSavedAndLocalRules() throws {
         // Check local rules (no saved rules)
-        XCTAssertEqual(sut.dccRules.count, 188)
+        XCTAssertEqual(sut.dccRules.count, 242)
 
         // Save one rule
         let rule = Rule(identifier: "", type: "", version: "", schemaVersion: "", engine: "", engineVersion: "", certificateType: "", description: [], validFrom: "", validTo: "", affectedString: [], logic: JSON(""), countryCode: "")

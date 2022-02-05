@@ -13,6 +13,10 @@
 
 "ok" = "OK";
 
+"close" = "Schließen";
+
+"cancel" = "Abbrechen";
+
 
 /********** onboarding **********/
 
@@ -32,9 +36,9 @@
 
 "accessibility_page_indicator" = "Seite %d von %d";
 
-"vaccination_first_onboarding_page_title" = "Erster Schritt: Übertragen Sie das digitale COVID-Zertifikat der EU auf Ihr Smartphone";
+"vaccination_first_onboarding_page_title" = "Erster Schritt: Übertragen Sie das digitale COVID-Zertifikat der EU auf Ihr Smartphone";
 
-"vaccination_first_onboarding_page_message" = "Scannen Sie mit der CovPass-App das digitale COVID-Zertifikat der EU für eine Corona-Impfung oder eine Genesung von der Corona-Infektion. Halten Sie dafür die Kamera Ihres Smartphones über den QR-Code. Das digitale COVID-Zertifikat der EU wird sofort auf Ihr Smartphone übertragen.";
+"vaccination_first_onboarding_page_message" = "Scannen Sie mit der CovPass-App das digitale COVID-Zertifikat der EU für eine Corona-Impfung oder eine Genesung von der Corona-Infektion. Halten Sie dafür die Kamera Ihres Smartphones über den QR-Code. Das digitale COVID-Zertifikat der EU wird sofort auf Ihr Smartphone übertragen.";
 
 "vaccination_second_onboarding_page_title" = "Zweiter Schritt: Rufen Sie den QR-Code in der CovPass-App auf";
 
@@ -42,7 +46,7 @@
 
 "vaccination_third_onboarding_page_title" = "Dritter Schritt: Zeigen Sie den QR-Code bei Bedarf vor";
 
-"vaccination_third_onboarding_page_message" = "Bei Bedarf können Sie den QR-Code in der CovPass-App vorzeigen. Der QR-Code wird dann von der prüfenden Person gescannt. Halten Sie dazu ergänzend Ihr Ausweisdokument bereit. Da der QR-Code nur auf Ihrem Smartphone gespeichert ist, können Sie ihn jederzeit auch ohne Internetverbindung anzeigen lassen.";
+"vaccination_third_onboarding_page_message" = "Bei Bedarf können Sie den QR-Code in der CovPass-App vorzeigen. Der QR-Code wird dann von der prüfenden Person gescannt. Halten Sie dazu ergänzend Ihr Ausweisdokument bereit. Da der QR-Code nur auf Ihrem Smartphone gespeichert ist, können Sie ihn jederzeit auch ohne Internetverbindung anzeigen lassen.";
 
 "vaccination_fourth_onboarding_page_title" = "Datenschutz und Datensicherheit";
 
@@ -101,23 +105,17 @@
 
 "vaccination_start_screen_note_message" = "Sie haben aktuell kein digitales COVID-Zertifikat der EU gespeichert. Drücken Sie auf die Taste \"Nachweis hinzufügen\" (Plus-Symbol), um ein digitales COVID-Zertifikat der EU hinzuzufügen.";
 
+"startscreen_card_title" = "Digitales COVID-Zertifikat der EU";
+
+"startscreen_card_button" = "Zertifikate anzeigen";
+
 "accessibility_vaccination_start_screen_label_qrcode" = "Schwarzer QR-Code auf weißem Hintergrund";
-
-"vaccination_start_screen_qrcode_incomplete_subtitle" = "Unvollständiger Impfschutz";
-
-"vaccination_start_screen_qrcode_complete_from_date_subtitle" = "Vollständig ab %@";
-
-"vaccination_start_screen_qrcode_complete_protection_subtitle" = "Vollständig seit %@";
-
-"certificates_start_screen_qrcode_certificate_expires_subtitle" = "Läuft am %@ um %@ ab";
 
 "certificates_start_screen_qrcode_certificate_expired_subtitle" = "Abgelaufen";
 
 "certificates_start_screen_qrcode_certificate_invalid_subtitle" = "Ungültig";
 
-"vaccination_start_screen_qrcode_booster_vaccination_note_subtitle" = "Impfstatus überprüfen";
-
-"vaccination_start_screen_qrcode_certificate_will_be_revoked_subtitle" = "Zertifikat wird bald gesperrt";
+"vaccination_start_screen_qrcode_booster_vaccination_note_subtitle" = "Status überprüfen";
 
 "certificates_start_screen_qr_code_app_reference_text" = "Dieser QR-Code lässt sich verlässlich mit der CovPassCheck-App prüfen.";
 
@@ -153,6 +151,32 @@
 
 "accessibility_certificate_add_popup_closing_announce" = "Die Ansicht \"QR-Code scannen\" wurde geschlossen";
 
+"accessibility_certificate_add_warning_maximum_announce" = "Die Ansicht \"Sind Sie berechtigt?\" wurde geöffnet";
+
+"accessibility_certificate_add_warning_maximum_image" = "Bild: Zwei Personen stehen sich gegenüber. Die eine Person zeigt ihr Smartphone mit einem QR-Code. Die andere Person scannt den QR-Code und sieht einen grünen Haken.";
+
+"certificate_add_warning_maximum_title" = "Achtung: Sind Sie wirklich berechtigt?";
+
+"certificate_add_warning_maximum_copy_ios" = "Bitte stellen Sie sicher, dass Sie berechtigt sind, das Zertifikat einer anderen Person hinzuzufügen, z.B. für Ihre Kinder oder Angehörige. Mehr Informationen finden Sie in den #Häufigen Fragen::https://www.digitaler-impfnachweis-app.de/faq#.\n\n Wollen Sie nur die Gültigkeit prüfen? Nutzen Sie dafür bitte die #CovPassCheck-App::https://apps.apple.com/de/app/covpass-check/id1566140314#.";
+
+"certificate_add_warning_maximum_copy_android" = "Bitte stellen Sie sicher, dass Sie berechtigt sind, das Zertifikat einer anderen Person hinzuzufügen, z.B. für Ihre Kinder oder Angehörige. Mehr Informationen finden Sie in den #Häufigen Fragen::https://www.digitaler-impfnachweis-app.de/faq#.\n\n Wollen Sie nur die Gültigkeit prüfen? Nutzen Sie dafür bitte die #CovPassCheck-App::https://play.google.com/store/apps/details?id=de.rki.covpass.checkapp#.";
+
+"certificate_add_warning_maximum_button_primary" = "Zertifikat hinzufügen";
+
+"certificate_add_warning_maximum_button_secondary" = "Abbrechen";
+
+"accessibility_certificate_add_error_maximum_announce" = "Ein Fehler-Dialog wurde geöffnet";
+
+"certificate_add_error_maximum_title" = "Zertifikat kann nicht hinzugefügt werden";
+
+"certificate_add_error_maximum_copy" = "Um Missbrauch zu vermeiden, können Zertifikate von maximal 20 verschiedenen Personen hinzugefügt werden.\n\nDie CovPass-App ist nicht zur Prüfung fremder Zertifikate geeignet. Nutzen Sie zur Prüfung ausschließlich die CovPassCheck-App.";
+
+"certificate_add_error_maximum_button_1" = "Download CovPassCheck-App";
+
+"certificate_add_error_maximum_button_2" = "FAQ zur Zertifikatsprüfung";
+
+"certificate_add_error_maximum_button_3" = "OK";
+
 "accessibility_scan_success_announce" = "Zertifikat von %@ wurde erfolgreich hinzugefügt";
 
 "accessibility_certificate_add_popup_image" = "Bild: Person hält das Smartphone über drei unterschiedliche Zertifikate mit QR-Code";
@@ -161,7 +185,7 @@
 
 "certificate_add_popup_note_title" = "Kein Sperrcode auf Ihrem Smartphone vorhanden";
 
-"certificate_add_popup_note_message" = "Die CovPass-App speichert sensible Daten auf Ihrem Smartphone. Um die Daten vor fremdem Zugriff zu schützen, empfehlen wir Ihnen, einen Code zum Entsperren Ihres Smartphones einzurichten.";
+"certificate_add_popup_note_message" = "Die CovPass-App speichert sensible Daten auf Ihrem Smartphone. Um die Daten vor fremdem Zugriff zu schützen, empfehlen wir Ihnen, einen Code zum Entsperren Ihres Smartphones einzurichten.";
 
 "certificate_add_popup_message" = "Scannen Sie den QR-Code von einem digitalen COVID-Zertifikat der EU. Der Nachweis wird direkt in die CovPass-App übertragen.\n\nZu Buchungszwecken (z. B. Flug und Hotel) können Sie Ihr hinzugefügtes COVID-Zertifikat online an den Anbieter übermitteln. Scannen Sie dazu den QR-Code, der bei der Buchung angezeigt wird.";
 
@@ -181,7 +205,7 @@
 
 "accessibility_scan_dialog_camera_access_announce" = "Die Ansicht \"Kamerazugriff benötigt\" wurde geöffnet";
 
-"accessibility_scan_camera_announce" = "Kamera-Ansicht wurde geöffnet. Der QR-Code wird automatisch gescannt. ";
+"accessibility_scan_camera_announce" = "Kamera-Ansicht wurde geöffnet. Der QR-Code wird automatisch gescannt.";
 
 "accessibility_scan_camera_closing_announce" = "Kamera-Ansicht wurde geschlossen";
 
@@ -202,13 +226,36 @@
 "error_test_certificate_not_valid_button_title" = "OK";
 
 
+/********** popup: import qr code from photo library **********/
+
+"accessibility_scan_camera_select_file" = "Datei auswählen";
+
+"error_scan_code_not_recognized_title" = "QR-Code wurde nicht erkannt";
+
+"error_scan_code_not_recognized_message" = "In der ausgewählten Datei wurde kein QR-Code gefunden. Bitte wählen Sie eine Datei oder ein Foto mit einem QR-Code aus.";
+
+"error_scan_code_not_recognized_action_button" = "OK";
+
+"error_scan_file_could_not_be_read_title" = "Die Datei konnte nicht gelesen werden";
+
+"error_scan_file_could_not_be_read_message" = "Die gewählte Datei ist möglicherweise beschädigt oder passwortgeschützt. Bitte wählen Sie eine andere Datei aus.";
+
+"error_scan_file_could_not_be_read_action_button" = "OK";
+
+"error_scan_code_not_suitable_title" = "QR-Code ist nicht geeignet";
+
+"error_scan_code_not_suitable_message" = "Der QR-Code kann nicht in die CovPass-App übertragen werden, da dieser z. B. keine gültige Signatur besitzt. Möglicherweise ist der QR-Code auch nicht lesbar, weil mehrere QR-Codes in der Datei vorhanden sind. Bitte wählen Sie eine Datei mit einem zulässigen QR-Code aus.";
+
+"error_scan_code_not_suitable_action_button" = "OK";
+
+
 /********** start Screen: favorite immunization certificate **********/
 
 "accessibility_certificate_favorite_button_label_active" = "Zertifikate dieser Person immer an erster Stelle anzeigen: aktiv";
 
 "accessibility_certificate_favorite_button_label_not_active" = "Zertifikate dieser Person immer an erster Stelle anzeigen: nicht aktiv";
 
-"certificate_action_button_check_validity" = "Gültigkeit prüfen";
+"certificate_action_button_check_validity" = "Für Reisen prüfen";
 
 
 /********** screen: check validity **********/
@@ -380,7 +427,7 @@
 
 "BR" = "Brasilien";
 
-"BI" = "Burundi ";
+"BI" = "Burundi";
 
 "CV" = "Kap Verde";
 
@@ -447,6 +494,10 @@
 "UY" = "Uruguay";
 
 "VN" = "Vietnam";
+
+"AR" = "Argentinien";
+
+"MX" = "Mexiko";
 
 "certificate_check_validity_selection_country_note" = "Sie finden Ihr Reiseland nicht? In einem mehrstufigen Prozess werden nach und nach mehr Länder verfügbar gemacht. \n\nMehr Informationen finden Sie in den Häufigen Fragen und unter #https://reopen.europa.eu::https://reopen.europa.eu#.";
 
@@ -578,33 +629,6 @@
 
 "error_check_validity_no_internet_button_cancel" = "Abbrechen";
 
-
-/********** start Screen: partial immunization certificate **********/
-
-"vaccination_partial_immunization_action_button" = "Zertifikate anzeigen";
-
-
-/********** start screen: full immunization certificate **********/
-
-"vaccination_full_immunization_action_button" = "Zertifikate anzeigen";
-
-"vaccination_full_immunization_status_expired" = "Abgelaufen";
-
-
-/********** start screen: test certificate **********/
-
-"test_certificate_action_button" = "Zertifikate anzeigen";
-
-
-/********** start screen: pcr test certificate **********/
-
-"pcr_test_certificate_action_button" = "Zertifikate anzeigen";
-
-
-/********** start screen: recovery certificate **********/
-
-"recovery_certificate_action_button" = "Zertifikate anzeigen";
-
 "error_connect_to_internet_title" = "Flugzeugmodus ausschalten oder WLAN für den Datenzugriff verwenden";
 
 "error_connect_to_internet_button_settings" = "Einstellungen";
@@ -624,7 +648,7 @@
 
 "booster_vaccination_certificate_overview_action_button_title" = "Aktuellen QR-Code anzeigen";
 
-"vaccination_certificate_overview_incomplete_title" = "Unvollständig: %d von %d Impfungen";
+"vaccination_certificate_overview_incomplete_title" = "Unvollständiger Impfschutz: %d von %d";
 
 "vaccination_certificate_overview_incomplete_message" = "Ihr Impfschutz ist nicht vollständig. Um den QR-Code als Nachweis für einen kompletten Impfschutz vorzeigen zu können, fügen Sie bitte eine weitere Impfung hinzu.";
 
@@ -634,7 +658,7 @@
 
 "vaccination_certificate_overview_complete_from_message" = "Ihr Impfschutz ist noch nicht vollständig. Der Impfschutz ist erst 14 Tage nach der letzten Impfung vollständig.";
 
-"vaccination_certificate_overview_complete_title" = "Vollständiger Impfschutz";
+"vaccination_certificate_overview_complete_title" = "Vollständiger Impfschutz seit %@";
 
 "certificates_overview_qr_scan_hint" = "Dieser QR-Code lässt sich verlässlich mit der CovPassCheck-App überprüfen.";
 
@@ -662,7 +686,7 @@
 
 "pcr_test_certificate_overview_action_button_title" = "Aktuellen QR-Code anzeigen";
 
-"recovery_certificate_overview_valid_until_title" = "Genesung gültig bis %@";
+"recovery_certificate_overview_valid_until_title" = "Genesung höchstens gültig bis %@";
 
 "recovery_certificate_overview_valid_from_title" = "Genesung gültig ab %@";
 
@@ -675,6 +699,10 @@
 "certificates_overview_expired_message" = "Das Ablaufdatum Ihrer Zertifikate wurde überschritten. Bitte bemühen Sie sich darum, einen neuen digitalen Nachweis ausstellen zu lassen.";
 
 "certificates_overview_expired_action_button_title" = "Neues Zertifikat hinzufügen";
+
+"certificates_overview_soon_expiring_title" = "Aktuelles Zertifikat läuft am %@ um %@ ab";
+
+"certificates_overview_soon_expiring_subtitle" = "Bitte bemühen Sie sich rechtzeitig darum, einen neuen digitalen Nachweis ausstellen zu lassen.";
 
 "certificates_overview_invalid_title" = "Zertifikat ungültig";
 
@@ -724,7 +752,7 @@
 
 "certificates_overview_recovery_certificate_message" = "Vollständige Genesung";
 
-"certificates_overview_recovery_certificate_valid_until_date" = "Gültig bis %@";
+"certificates_overview_recovery_certificate_valid_until_date" = "Höchstens gültig bis %@";
 
 "certificates_overview_recovery_certificate_valid_from_date" = "Gültig ab %@";
 
@@ -1149,9 +1177,11 @@
 
 "accessibility_app_information_open_source_label_back" = "Zurück";
 
+"app_information_title_accessibility_statement" = "Barrierefreiheitserklärung";
+
 "app_information_title_update" = "Einreiseregeln aktualisieren";
 
-"app_information_message_update" = "Zur Überprüfung der Gültigkeit von Zertifikaten benötigt die App aktuelle Listen der vertrauenswürdigen Zertifikatsaussteller und der momentan geltenden Corona-Einreiseregeln in den entsprechenden Ländern.\n\nDiese Listen aktualisieren sich täglich automatisch. Sie können hier auch jederzeit eine manuelle Aktualisierung vornehmen. ";
+"app_information_message_update" = "Zur Überprüfung der Gültigkeit von Zertifikaten benötigt die App aktuelle Listen der vertrauenswürdigen Zertifikatsaussteller und der momentan geltenden Corona-Einreiseregeln in den entsprechenden Ländern.\n\nDiese Listen aktualisieren sich täglich automatisch. Sie können hier auch jederzeit eine manuelle Aktualisierung vornehmen.";
 
 "app_information_message_update_note" = "Letztes Update";
 
@@ -1218,6 +1248,27 @@
 "accessibility_share_certificate_label_close" = "Schließen";
 
 "accessibility_share_certificate_label_back" = "Zurück";
+
+
+/********** Warning: Unknown service provider **********/
+
+"warning_unknown_provider_title" = "Unbekannter Anbieter";
+
+"warning_unknown_provider_copy" = "Der Anbieter „%@“ ist uns nicht bekannt. Falls Sie fortfahren, überprüfen Sie bitte die Herkunft des QR-Codes und vergewissern Sie sich, ob Sie dem Anbieter Ihr Zertifikat übermitteln wollen.";
+
+"warning_unknown_provider_box_title" = "Achten Sie besonders auf:";
+
+"warning_unknown_provider_box_item_1" = "Der Name des Anbieters sollte Ihnen bekannt sein.";
+
+"warning_unknown_provider_box_item_2" = "Der Name des Anbieters sollte mit dem Namen auf dem Buchungsportal übereinstimmen.";
+
+"warning_unknown_provider_box_item_3" = "Sollten Sie Zweifel an der Seriösität des Anbieters haben, brechen Sie den Vorgang lieber ab.";
+
+"warning_unknown_provider_box_item_4" = "Sollten Sie weitere Fragen haben, wenden Sie sich an den Anbieter.";
+
+"warning_unknown_provider_box_button_primary" = "Trotzdem weiter";
+
+"warning_unknown_provider_box_button_secondary" = "Abbrechen";
 
 "accessibility_share_certificate_announce" = "Die Ansicht \"Zertifikate zu Buchungszwecken freigeben\" wurde geöffnet.";
 
@@ -1321,11 +1372,29 @@
 
 "error_share_certificate_provider_not_verified_action_button" = "OK";
 
-"error_share_certificate_test_partner_not_verified_title" = "Die Identität des Prüfpartners konnte nicht überprüft werden";
+"error_share_certificate_validation_partner_not_verified_title" = "Die Identität des Prüfpartners konnte nicht überprüft werden";
 
-"error_share_certificate_test_partner_not_verified_message" = "Das Buchungsportal schlägt vor, Ihr Zertifikat mit folgendem Prüfpartner zu teilen: %@. Dieser Prüfpartner ist uns nicht bekannt.\n\nEine Liste der unterstützten Prüfpartner finden Sie in den Häufigen Fragen.";
+"error_share_certificate_validation_partner_not_verified_message" = "Das Buchungsportal schlägt vor, Ihr Zertifikat mit folgendem Prüfpartner zu teilen: %@. Dieser Prüfpartner ist uns nicht bekannt.\n\nEine Liste der unterstützten Prüfpartner finden Sie in den Häufigen Fragen.";
 
-"error_share_certificate_test_partner_not_verified_action_button" = "OK";
+"error_share_certificate_validation_partner_not_verified_action_button" = "OK";
+
+"error_share_certificate_validation_partner_not_verified_title2" = "Die Identität des Prüfpartners konnte nicht überprüft werden";
+
+"error_share_certificate_validation_partner_not_verified_message2" = "Bei der Prüfung der Identität des Prüfpartners kam es leider zu einem Fehler. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal.";
+
+"error_share_certificate_validation_partner_not_verified_action_button2" = "OK";
+
+"error_share_certificate_access_token_not_retrieved_title" = "Die Buchungsdaten konnten nicht geladen werden";
+
+"error_share_certificate_access_token_not_retrieved_message" = "Bei der Übertragung der Buchungsdaten kam es leider zu einem Fehler. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal.";
+
+"error_share_certificate_access_token_not_retrieved_action_button" = "OK";
+
+"error_share_certificate_access_token_not_processed_title" = "Die Buchungsdaten konnten nicht verarbeitet werden";
+
+"error_share_certificate_access_token_not_processed_message" = "Bei der Verarbeitung der Buchungsdaten kam es leider zu einem Fehler. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal.";
+
+"error_share_certificate_access_token_not_processed_action_button" = "OK";
 
 "error_share_certificate_no_connection_to_provider_title" = "Es konnte keine Verbindung zum Anbieter hergestellt werden";
 
@@ -1338,6 +1407,12 @@
 "error_share_certificate_no_verification_possible_message" = "Leider konnte die Prüfung nicht erfolgreich abgeschlossen werden. Mögliche Gründe dazu finden Sie in den Häufigen Fragen. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal.";
 
 "error_share_certificate_no_verification_possible_action_button" = "OK";
+
+"error_share_certificate_no_verification_submission_possible_title" = "Das Zertifikat konnte nicht zur Prüfung übermittelt werden";
+
+"error_share_certificate_no_verification_submission_possible_message" = "Leider konnte das Zertifikat nicht an den Prüfpartner übermittelt werden. Mögliche Gründe dazu finden Sie in den Häufigen Fragen. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal.";
+
+"error_share_certificate_no_verification_submission_possible_action_button" = "OK";
 
 "cancellation_share_certificate_title" = "Wollen Sie den Vorgang wirklich beenden?";
 

@@ -9,6 +9,7 @@
 @testable import CovPassCommon
 @testable import CovPassUI
 import PromiseKit
+import CertLogic
 import XCTest
 
 class RulesCheckSnapShotTests: BaseSnapShotTests {
@@ -49,7 +50,7 @@ class RulesCheckSnapShotTests: BaseSnapShotTests {
                                      certLogic: certLogicMock)
         sut.date = DateUtils.parseDate("2021-04-26T15:05:00")!
         let vc = RuleCheckViewController(viewModel: sut)
-        verifyAsyc(vc: vc)
+        verifyAsync(vc: vc)
     }
     
     func testWithCertificates() {
@@ -105,9 +106,7 @@ class RulesCheckSnapShotTests: BaseSnapShotTests {
         ]
         
         vaccinationRepoMock.certificates = certificates
-        certLogicMock.validateResult = .init(arrayLiteral: .init(rule: nil,
-                                                                 result: .init(rawValue: 1)!,
-                                                                 validationErrors: nil))
+        certLogicMock.validateResult = [ValidationResult(rule: nil, result: .passed, validationErrors: nil)]
         let sut = RuleCheckViewModel(router: nil,
                                      resolvable: nil,
                                      repository: vaccinationRepoMock,
@@ -172,9 +171,7 @@ class RulesCheckSnapShotTests: BaseSnapShotTests {
         ]
         
         vaccinationRepoMock.certificates = certificates
-        certLogicMock.validateResult = .init(arrayLiteral: .init(rule: nil,
-                                                                 result: .init(rawValue: 1)!,
-                                                                 validationErrors: nil))
+        certLogicMock.validateResult = [ValidationResult(rule: nil, result: .passed, validationErrors: nil)]
         let sut = RuleCheckViewModel(router: nil,
                                      resolvable: nil,
                                      repository: vaccinationRepoMock,
@@ -238,9 +235,7 @@ class RulesCheckSnapShotTests: BaseSnapShotTests {
         ]
         
         vaccinationRepoMock.certificates = certificates
-        certLogicMock.validateResult = .init(arrayLiteral: .init(rule: nil,
-                                                                 result: .init(rawValue: 1)!,
-                                                                 validationErrors: nil))
+        certLogicMock.validateResult = [ValidationResult(rule: nil, result: .passed, validationErrors: nil)]
         let sut = RuleCheckViewModel(router: nil,
                                      resolvable: nil,
                                      repository: vaccinationRepoMock,
@@ -306,9 +301,7 @@ class RulesCheckSnapShotTests: BaseSnapShotTests {
         ]
         
         vaccinationRepoMock.certificates = certificates
-        certLogicMock.validateResult = .init(arrayLiteral: .init(rule: nil,
-                                                                 result: .init(rawValue: 1)!,
-                                                                 validationErrors: nil))
+        certLogicMock.validateResult = [ValidationResult(rule: nil, result: .passed, validationErrors: nil)]
         let sut = RuleCheckViewModel(router: nil,
                                      resolvable: nil,
                                      repository: vaccinationRepoMock,
@@ -340,9 +333,7 @@ class RulesCheckSnapShotTests: BaseSnapShotTests {
         ]
         
         vaccinationRepoMock.certificates = certificates
-        certLogicMock.validateResult = .init(arrayLiteral: .init(rule: nil,
-                                                                 result: .init(rawValue: 1)!,
-                                                                 validationErrors: nil))
+        certLogicMock.validateResult = [ValidationResult(rule: nil, result: .passed, validationErrors: nil)]
         let sut = RuleCheckViewModel(router: nil,
                                      resolvable: nil,
                                      repository: vaccinationRepoMock,
@@ -413,9 +404,7 @@ class RulesCheckSnapShotTests: BaseSnapShotTests {
         ]
         
         vaccinationRepoMock.certificates = certificates
-        certLogicMock.validateResult = .init(arrayLiteral: .init(rule: nil,
-                                                                 result: .init(rawValue: 1)!,
-                                                                 validationErrors: nil))
+        certLogicMock.validateResult = [ValidationResult(rule: nil, result: .passed, validationErrors: nil)]
         let sut = RuleCheckViewModel(router: nil,
                                      resolvable: nil,
                                      repository: vaccinationRepoMock,
@@ -482,9 +471,7 @@ class RulesCheckSnapShotTests: BaseSnapShotTests {
         ]
         
         vaccinationRepoMock.certificates = certificates
-        certLogicMock.validateResult = .init(arrayLiteral: .init(rule: nil,
-                                                                 result: .init(rawValue: 1)!,
-                                                                 validationErrors: nil))
+        certLogicMock.validateResult = [ValidationResult(rule: nil, result: .passed, validationErrors: nil)]
         let sut = RuleCheckViewModel(router: nil,
                                      resolvable: nil,
                                      repository: vaccinationRepoMock,
@@ -528,9 +515,7 @@ class RulesCheckSnapShotTests: BaseSnapShotTests {
         ]
         
         vaccinationRepoMock.certificates = certificates
-        certLogicMock.validateResult = .init(arrayLiteral: .init(rule: nil,
-                                                                 result: .init(rawValue: 1)!,
-                                                                 validationErrors: nil))
+        certLogicMock.validateResult = [ValidationResult(rule: nil, result: .passed, validationErrors: nil)]
         let sut = RuleCheckViewModel(router: nil,
                                      resolvable: nil,
                                      repository: vaccinationRepoMock,

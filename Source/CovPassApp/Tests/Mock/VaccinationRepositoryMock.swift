@@ -11,7 +11,7 @@ import Foundation
 import PromiseKit
 
 public class VaccinationRepositoryMock: VaccinationRepositoryProtocol {
-    
+
     var lastUpdatedTrustList: Date?
     var certificates: [ExtendedCBORWebToken] = []
     var certPair: [CertificatePair] = []
@@ -38,7 +38,21 @@ public class VaccinationRepositoryMock: VaccinationRepositoryProtocol {
         }
         return pairs
     }
-
+    
+    public func trustListShouldBeUpdated() -> Promise<Bool> {
+        .value(trustListShouldBeUpdated())
+    }
+    
+    public func trustListShouldBeUpdated() -> Bool {
+        if let lastUpdated = self.getLastUpdatedTrustList(),
+           let date = Calendar.current.date(byAdding: .day, value: 1, to: lastUpdated),
+           Date() < date
+        {
+            return false
+        }
+        return true
+    }
+    
     public func getLastUpdatedTrustList() -> Date? {
         lastUpdatedTrustList
     }
@@ -78,7 +92,7 @@ public class VaccinationRepositoryMock: VaccinationRepositoryProtocol {
         .value(favoriteToggle)
     }
 
-    public func scanCertificate(_: String) -> Promise<ExtendedCBORWebToken> {
+    public func scanCertificate(_: String, isCountRuleEnabled: Bool) -> Promise<QRCodeScanable> {
         return Promise { seal in
             seal.reject(ApplicationError.unknownError)
         }

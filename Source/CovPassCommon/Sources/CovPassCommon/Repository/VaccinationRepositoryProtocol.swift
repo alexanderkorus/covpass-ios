@@ -33,8 +33,8 @@ public protocol VaccinationRepositoryProtocol {
     /// If an error occurs, the method will not return a certificate but an error
     ///
     /// - USED BY CovPass App
-    func scanCertificate(_ data: String) -> Promise<ExtendedCBORWebToken>
-
+    func scanCertificate(_ data: String, isCountRuleEnabled: Bool) -> Promise<QRCodeScanable>
+    
     /// checkCertificate validates the given QR code and returns the  certificate when it's valid, otherwise an error
     ///
     /// - USED BY CovPassCheck App
@@ -48,7 +48,11 @@ public protocol VaccinationRepositoryProtocol {
 
     /// Returns true if collection contains a favorite certificate. False otherwise.
     func favoriteStateForCertificates(_ certificates: [ExtendedCBORWebToken]) -> Promise<Bool>
-
+    
     /// Returns all certificates matched based on name and birthdate
     func matchedCertificates(for certificateList: CertificateList) -> [CertificatePair]
+    
+    func trustListShouldBeUpdated() -> Promise<Bool>
+    
+    func trustListShouldBeUpdated() -> Bool
 }

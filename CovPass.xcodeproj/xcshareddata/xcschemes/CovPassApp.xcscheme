@@ -41,6 +41,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
+      language = "en"
+      region = "US"
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
       <CodeCoverageTargets>
@@ -65,6 +67,9 @@
             <SkippedTests>
                <Test
                   Identifier = "CertificateOverviewSnapShotTests/testCertificateOverviewCertificatesScrolledTo1()">
+               </Test>
+               <Test
+                  Identifier = "ValidationServiceViewControllerSnapShotTests">
                </Test>
             </SkippedTests>
          </TestableReference>

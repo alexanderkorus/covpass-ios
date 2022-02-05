@@ -21,7 +21,7 @@ private enum Constants {
 }
 
 public protocol CustomToolbarViewDelegate: AnyObject {
-    func customToolbarView(_: CustomToolbarView, didTap buttonType: ButtonItemType)
+    func customToolbarView(_ view: CustomToolbarView, didTap buttonType: ButtonItemType)
 }
 
 public enum ButtonItemType {
@@ -54,10 +54,10 @@ public enum CustomToolbarState: Equatable {
 /// A custom toolbar that supports multiple states
 public class CustomToolbarView: XibView {
     public weak var delegate: CustomToolbarViewDelegate?
-
     @IBOutlet var leftButton: UIButton!
     @IBOutlet var rightButton: UIButton!
     public var primaryButton: MainButton!
+    private var gradientLayer = CAGradientLayer()
 
     public var state: CustomToolbarState {
         get {
@@ -347,6 +347,21 @@ public class CustomToolbarView: XibView {
     }
 
     // MARK: Action Methods
+    
+    public override func initView() {
+        super.initView()
+        gradientLayer.removeFromSuperlayer()
+        self.backgroundColor = .clear
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = [UIColor(white: 1, alpha: 0).cgColor, UIColor.backgroundPrimary.cgColor, UIColor.backgroundPrimary.cgColor]
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = self.bounds
+    }
 
     @IBAction func leftButtonPressed() {
         leftButtonAction?()

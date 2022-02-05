@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "CryptoSwift",
+        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "4b0565384d3c4c588af09e660535b2c7c9bf5b39",
+          "version": "1.4.2"
+        }
+      },
+      {
         "package": "CertLogic",
         "repositoryURL": "https://github.com/eu-digital-green-certificates/dgc-certlogic-ios",
         "state": {
@@ -32,9 +41,9 @@
         "package": "iOSSnapshotTestCase",
         "repositoryURL": "https://github.com/uber/ios-snapshot-test-case",
         "state": {
-          "branch": "main",
-          "revision": "444c218adaa6a99ba0536b4ec9ad5500047d9051",
-          "version": null
+          "branch": null,
+          "revision": "7b10770333a961be6e5a41c9ce04b8c6d3990126",
+          "version": "8.0.0"
         }
       },
       {
@@ -42,8 +51,17 @@
         "repositoryURL": "https://github.com/eu-digital-green-certificates/json-logic-swift.git",
         "state": {
           "branch": null,
-          "revision": "c830f34a35753f4d441bd291e40e4a4feee9ede0",
-          "version": "1.1.9"
+          "revision": "e59a317e03491abe1f04c87b965a52abae243ddd",
+          "version": "1.1.8"
+        }
+      },
+      {
+        "package": "JWTDecode",
+        "repositoryURL": "https://github.com/auth0/JWTDecode.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "3cd207fb9e943b6168a117baa3936c823204c2dc",
+          "version": "2.6.3"
         }
       },
       {
@@ -60,8 +78,8 @@
         "repositoryURL": "https://github.com/mxcl/PromiseKit",
         "state": {
           "branch": null,
-          "revision": "93c8d41ce96ed78f36c3948be396d76f3ca3de1b",
-          "version": "6.16.2"
+          "revision": "d2f7ba14bcdc45e18f4f60ad9df883fb9055f081",
+          "version": "6.15.3"
         }
       },
       {
@@ -69,8 +87,8 @@
         "repositoryURL": "https://github.com/unrelentingtech/SwiftCBOR",
         "state": {
           "branch": null,
-          "revision": "895c9aa84ce3b04106905e398ac870e0cca59d26",
-          "version": "0.4.4"
+          "revision": "668c26fc3373d5f1bccbaad7665ca6048797e324",
+          "version": "0.4.3"
         }
       },
       {

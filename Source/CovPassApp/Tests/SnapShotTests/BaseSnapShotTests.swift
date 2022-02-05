@@ -5,9 +5,9 @@
 //  SPDX-License-Identifier: Apache-2.0
 //
 
-@testable import CovPassCommon
 import XCTest
-import FBSnapshotTestCase
+import iOSSnapshotTestCaseCore
+import iOSSnapshotTestCase
 
 class BaseSnapShotTests: FBSnapshotTestCase {
     
@@ -39,7 +39,7 @@ class BaseSnapShotTests: FBSnapshotTestCase {
                              perPixelTolerance: 0.1)
     }
 
-    func verifyAsyc(vc: UIViewController,
+    func verifyAsync(vc: UIViewController,
                     wait: TimeInterval = 0.1,
                     record: Bool = false) {
         recordMode = record
